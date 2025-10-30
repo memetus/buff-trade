@@ -1,0 +1,14 @@
+{
+  "coins": [
+    {
+      "symbol": "HOMO",
+      "address": "7Uuzh9JwqF8z3u6MWpQuQJbpD1u46xPDY6PGjwfwTh4o",
+      "allocation": 0,
+      "analysis": "HOMO has a current price of $0.0092, down 19.33% in the last 24 hours. The trading volume is 1.2M, indicating rising liquidity with a recent volume change of +111.57%. Market cap is $9.23M with 1.0B circulating supply, suggesting low liquidity and high volatility. Buyer activity is robust but sellers are dominating. RSI is below 30, indicating it may be oversold. Critical support is at $0.0085, while resistance sits at $0.011. Despite its negative trend, community interest remains, with around 17K holders. Investors need to weigh the potential for catching it low versus its downward momentum.",
+      "sentiment": "neutral",
+      "recommendation": "sell",
+      "priority": "medium",
+      "name": "Solana Social Explorer"
+    }
+  ]
+}
