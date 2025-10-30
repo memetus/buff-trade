@@ -1,0 +1,72 @@
+@import "@/styles/_mixin.scss";
+
+.header-nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  .launch-button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #e2e8f0;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-1px);
+    }
+
+    .launch-icon {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .launch-text {
+      font-family: var(--font-inter-regular);
+      white-space: nowrap;
+    }
+  }
+}
+
+@include laptop {
+  @media (max-width: 800px) {
+    .header-nav-wrapper {
+      .launch-button {
+        padding: 6px 12px;
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .header-nav-wrapper {
+    .launch-button {
+      padding: 6px 12px;
+      font-size: 13px;
+    }
+  }
+}
+
+@include mobile {
+  .header-nav-wrapper {
+    .launch-button {
+      padding: 6px 10px;
+      font-size: 12px;
+
+      .launch-text {
+        display: none;
+      }
+    }
+  }
+}

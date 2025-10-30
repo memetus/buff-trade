@@ -1,0 +1,252 @@
+@import "../../styles/_color.scss";
+@import "../../styles/_mixin.scss";
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: "Inter-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: $primary-color;
+  }
+}
+
+.create-btn {
+  @include button-primary;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.not-connected {
+  text-align: center;
+  padding: 4rem 2rem;
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: $text-primary;
+  }
+
+  p {
+    color: $text-secondary;
+    font-size: 1rem;
+  }
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: 2rem;
+
+  p {
+    font-size: 1.1rem;
+    color: $text-secondary;
+  }
+}
+
+.error p {
+  color: $error-color;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: $text-primary;
+  }
+
+  p {
+    color: $text-secondary;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+  }
+}
+
+.tokens-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.token-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid $border-color;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    border-color: $primary-color;
+  }
+}
+
+.token-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.token-info {
+  h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: $text-primary;
+    margin: 0 0 0.25rem 0;
+  }
+
+  .ticker {
+    font-size: 0.9rem;
+    color: $text-secondary;
+    background: $background-light;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+}
+
+.migration-status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: $warning-color;
+  color: white;
+
+  &.migrated {
+    background: $success-color;
+  }
+}
+
+.token-details {
+  margin-bottom: 1rem;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+
+  .label {
+    font-size: 0.9rem;
+    color: $text-secondary;
+    font-weight: 500;
+  }
+
+  .value {
+    font-size: 0.9rem;
+    color: $text-primary;
+    font-weight: 600;
+
+    &.address {
+      font-family: "Consolas", monospace;
+      background: $background-light;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+    }
+  }
+}
+
+.strategy {
+  margin-bottom: 1rem;
+
+  .label {
+    font-size: 0.9rem;
+    color: $text-secondary;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: $text-primary;
+    line-height: 1.4;
+    margin: 0;
+  }
+}
+
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  font-size: 0.8rem;
+  color: $primary-color;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  background: $background-light;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: $primary-color;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+
+    h1 {
+      text-align: center;
+    }
+  }
+
+  .tokens-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .token-card {
+    padding: 1rem;
+  }
+
+  .token-header {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}

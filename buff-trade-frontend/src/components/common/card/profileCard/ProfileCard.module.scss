@@ -1,0 +1,76 @@
+.card {
+  width: 211px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: #242629;
+  padding: 0 12px;
+  cursor: pointer;
+  font-family: "Inter-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+
+  .profile-text-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    flex: 1;
+    min-width: 0;
+
+    .profile-name-text {
+      font-size: 13px;
+      color: #d1d9e0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      flex-shrink: 1;
+      min-width: 0;
+      font-weight: 500;
+    }
+
+    .profile-balance-text {
+      font-size: 12px;
+      color: #757c82;
+      white-space: nowrap;
+      flex-shrink: 0;
+      font-weight: 400;
+    }
+  }
+
+  .dropdown-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+    flex-shrink: 0;
+    margin-top: 2px;
+
+    .arrow-icon {
+      width: 14px;
+      height: 14px;
+      fill: #a1a6aa;
+      transition: fill 0.2s ease;
+    }
+  }
+
+  // 모바일에서 더 컴팩트하게
+  @media (max-width: 768px) {
+    width: 180px;
+    height: 32px;
+
+    .profile-text-wrapper {
+      gap: 6px;
+
+      .profile-name-text {
+        font-size: 12px;
+      }
+
+      .profile-balance-text {
+        font-size: 11px;
+      }
+    }
+  }
+}

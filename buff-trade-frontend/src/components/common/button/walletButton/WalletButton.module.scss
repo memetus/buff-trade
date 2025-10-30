@@ -1,0 +1,66 @@
+.button {
+  width: 3.2rem;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  position: relative;
+  font-family: "Inter-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+
+  .icon {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+  }
+
+  .phantom-icon {
+    background-image: url(/logos/phantom.svg);
+  }
+
+  .okx-icon {
+    background-image: url(/logos/okx.svg);
+  }
+
+  .solflare-icon {
+    background-image: url(/logos/solflare.svg);
+  }
+
+  .ledger-icon {
+    background-image: url(/logos/ledger.svg);
+  }
+
+  .magiceden-icon {
+    background-image: url(/logos/magiceden.svg);
+  }
+
+  .coinbase-icon {
+    background-image: url(/logos/coinbase.svg);
+  }
+
+  .math-icon {
+    background-image: url(/logos/math.svg);
+  }
+
+  .backpack-icon {
+    background-image: url(/logos/backpack.avif);
+  }
+
+  .button-text {
+    position: absolute;
+    bottom: -1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.7rem;
+    font-family: var(--font-sora-regular);
+    color: var(--color-gray-400);
+    text-align: center;
+    text-wrap: nowrap;
+  }
+}

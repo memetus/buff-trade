@@ -1,0 +1,108 @@
+.ticker-root {
+  position: sticky;
+  top: 60px; // sits right under the header
+  z-index: 90;
+  width: 100%;
+  height: 64px;
+  background: #000000;
+  overflow: hidden;
+}
+
+.track {
+  width: 100%;
+  overflow: hidden;
+}
+
+.row {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 64px;
+  padding: 0 16px;
+  white-space: nowrap;
+  animation: marquee 100s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 10px;
+  border-radius: 10px;
+  background: #242629;
+  color: #0d0d0d; // gray-300
+  font-size: 12px;
+
+  > * + * {
+    margin-left: 6px;
+  }
+}
+
+.type-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  margin-right: 0;
+}
+
+.type-icon + * {
+  margin-left: 0;
+}
+
+.user {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 6px;
+  height: 22px;
+  border-radius: 6px;
+  color: #9ca3af;
+}
+
+.text {
+  color: #9ca3af;
+}
+.amount {
+  color: #e5e7eb;
+  font-weight: 600;
+}
+.symbol {
+  color: #e5e7eb;
+  font-weight: 700;
+}
+
+.pnl {
+  font-weight: 700;
+  &.profit {
+    color: #10b981;
+  }
+  &.loss {
+    color: #ef4444;
+  }
+}
+
+.mask-left,
+.mask-right {
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  pointer-events: none;
+}
+
+.mask-left {
+  left: 0;
+}
+
+.mask-right {
+  right: 0;
+}

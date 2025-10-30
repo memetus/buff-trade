@@ -1,0 +1,199 @@
+@import "@/styles/_mixin.scss";
+
+.logo-container {
+  position: relative;
+  display: inline-block;
+}
+
+.base-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    .base-logo-text {
+      color: #f5f5f5;
+    }
+  }
+
+  .icon {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: all 0.2s ease;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .logo-image {
+    transition: all 0.2s ease;
+  }
+
+  // Mobile logo (default)
+  .mobile-logo {
+    display: block;
+  }
+
+  .pc-logo,
+  .pc-logo-hover {
+    display: none;
+  }
+
+  // PC hover effect
+  &:hover {
+    .mobile-logo {
+      opacity: 0;
+    }
+
+    .pc-logo {
+      opacity: 0;
+    }
+
+    .pc-logo-hover {
+      opacity: 1;
+    }
+  }
+
+  .base-logo-text {
+    letter-spacing: -1px;
+    font-size: 22px;
+    text-wrap: nowrap;
+    font-family: var(--font-audiowide);
+    color: #a1a6aa;
+    transition: color 0.2s ease;
+    display: none; // 텍스트 숨김
+  }
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 20px; /* 드롭다운 메뉴를 더 아래로 이동 */
+  background: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 8px 0;
+  min-width: 160px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  animation: slideDown 0.2s ease-out;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  gap: 8px;
+
+  &:hover {
+    background: #101010;
+  }
+
+  span {
+    flex: 1;
+  }
+
+  .external-icon {
+    opacity: 0.7;
+    transition: all 0.2s ease;
+  }
+
+  &:hover .external-icon {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@include laptop {
+  @media (max-width: 800px) {
+    .base-logo {
+      .base-logo-text {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .base-logo {
+    .base-logo-text {
+      font-size: 16px;
+    }
+  }
+}
+
+@include mobile {
+  .base-logo {
+    .base-logo-text {
+      display: none;
+    }
+  }
+}
+
+// PC 화면에서 로고 변경 (768px 이상)
+@media (min-width: 768px) {
+  .base-logo {
+    .icon {
+      width: 132px;
+      height: 32px;
+      min-width: 132px;
+      min-height: 32px;
+    }
+
+    .mobile-logo {
+      display: none;
+    }
+
+    .pc-logo {
+      display: block;
+    }
+
+    .pc-logo-hover {
+      display: block;
+      opacity: 0;
+    }
+  }
+}
+
+// Hide text on screens 620px and below
+@media (max-width: 620px) {
+  .base-logo {
+    .base-logo-text {
+      display: none;
+    }
+  }
+}

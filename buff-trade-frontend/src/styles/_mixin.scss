@@ -1,0 +1,90 @@
+$MOBILE: 320px;
+$TABLET: 600px;
+$LAPTOP: 1200px;
+$DESKTOP: 1440px;
+
+@mixin mobile {
+  @media (max-width: #{$MOBILE}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$MOBILE}) and (max-width: #{$TABLET - 1px}) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: #{$TABLET}) and (max-width: #{$LAPTOP - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$LAPTOP}) and (max-width: #{$DESKTOP}) {
+    @content;
+  }
+}
+
+@mixin button-primary {
+  background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+  }
+}
+
+// Common transition mixin
+@mixin transition-common {
+  transition: all 0.2s ease;
+}
+
+// Common button styles
+@mixin button-base {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  @include transition-common;
+}
+
+// Common text styles
+@mixin text-secondary {
+  color: #a1a6aa;
+  font-size: 14px;
+}
+
+@mixin text-primary {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+// Common background styles
+@mixin background-dark {
+  background-color: #242629;
+}
+
+@mixin background-hover {
+  background-color: #101010;
+}

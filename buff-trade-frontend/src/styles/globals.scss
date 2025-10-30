@@ -1,0 +1,213 @@
+@use "@/styles/_color.scss" as *;
+@import "@/styles/_font.scss";
+@import "@/styles/_typography.scss";
+@import "@/styles/_mixin.scss";
+
+:root {
+  font-size: 14px;
+
+  --color-white: #{$white};
+  --color-black: #{$black};
+
+  --color-gray-25: #{$gray-25};
+  --color-gray-200: #{$gray-200};
+  --color-gray-300: #{$gray-300};
+  --color-gray-400: #{$gray-400};
+  --color-gray-500: #{$gray-500};
+  --color-gray-600: #{$gray-600};
+  --color-gray-700: #{$gray-700};
+  --color-gray-800: #{$gray-800};
+  --color-gray-900: #{$gray-900};
+
+  --color-green-500: #{$green-500};
+
+  --color-red-500: #{$red-500};
+
+  --color-orange-50: #{$orange-50};
+  --color-orange-100: #{$orange-100};
+  --color-orange-300: #{$orange-300};
+
+  --font-roboto-black: "Roboto-Black";
+  --font-roboto-bold: "Roboto-Bold";
+  --font-roboto-extrabold: "Roboto-ExtraBold";
+  --font-roboto-extralight: "Roboto-ExtraLight";
+  --font-roboto-light: "Roboto-Light";
+  --font-roboto-medium: "Roboto-Medium";
+  --font-roboto-regular: "Roboto-Regular";
+  --font-roboto-semibold: "Roboto-SemiBold";
+  --font-roboto-thin: "Roboto-Thin";
+  --font-inter-black: "Inter-Black";
+  --font-inter-bold: "Inter-Bold";
+  --font-inter-extrabold: "Inter-ExtraBold";
+  --font-inter-extralight: "Inter-ExtraLight";
+  --font-inter-light: "Inter-Light";
+  --font-inter-medium: "Inter-Medium";
+  --font-inter-regular: "Inter-Regular";
+  --font-inter-semibold: "Inter-SemiBold";
+  --font-inter-thin: "Inter-Thin";
+  --font-consolas: "Consolas";
+  --font-ethnocentric: "EthNocentric";
+  --font-audiowide: "Audiowide";
+  --font-sora-bold: "Sora-Bold";
+  --font-sora-extrabold: "Sora-ExtraBold";
+  --font-sora-light: "Sora-Light";
+  --font-sora-medium: "Sora-Medium";
+  --font-sora-regular: "Sora-Regular";
+  --font-sora-semibold: "Sora-SemiBold";
+  --font-sora-thin: "Sora-Thin";
+  --font-sora-extralight: "Sora-ExtraLight";
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #141414;
+  font-family: "Inter-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+}
+
+/* 모든 요소에 Inter 폰트 강제 적용 */
+* {
+  font-family: "Inter-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif !important;
+}
+
+/* 모든 HTML 요소에 Inter 폰트 강제 적용 */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+button,
+input,
+textarea,
+select {
+  font-family: "Inter-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif !important;
+}
+
+/* 모든 클래스와 ID에도 Inter 폰트 강제 적용 */
+[class*="font-"],
+[id*="font-"],
+[class*="text-"],
+[id*="text-"],
+[class*="title-"],
+[id*="title-"],
+[class*="label-"],
+[id*="label-"],
+[class*="button-"],
+[id*="button-"],
+[class*="link-"],
+[id*="link-"] {
+  font-family: "Inter-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif !important;
+}
+
+/* CSS-in-JS와 인라인 스타일까지 덮어쓰기 */
+[style*="font-family"] {
+  font-family: "Inter-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif !important;
+}
+
+/* 모든 가능한 폰트 관련 속성 강제 적용 */
+* {
+  font-family: "Inter-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
+  line-height: normal !important;
+}
+
+main {
+  width: 100vw;
+  min-height: 100vh;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

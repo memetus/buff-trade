@@ -1,0 +1,78 @@
+@import "@/styles/_mixin.scss";
+
+.skeleton-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: pulse 1.5s ease-in-out infinite;
+
+  .skeleton-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .skeleton-avatar {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+
+  .skeleton-text-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .skeleton-title {
+    width: 60%;
+    height: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+
+  .skeleton-subtitle {
+    width: 40%;
+    height: 14px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+
+  .skeleton-description {
+    width: 100%;
+    height: 14px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+
+  .skeleton-stats {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+  }
+
+  .skeleton-stat {
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

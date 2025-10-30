@@ -1,0 +1,190 @@
+.card {
+  width: 100%;
+  min-width: 22rem;
+  max-width: 26rem;
+  height: 16rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: var(--color-gray-900);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  gap: 1rem;
+  font-family: "Inter-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+
+  &:hover {
+    .card-data {
+      .card-image {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+      }
+    }
+  }
+
+  .card-header {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    .card-metadata {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      gap: 0.5rem;
+
+      .card-name {
+        font-size: 16px;
+        font-family: var(--font-sora-semibold);
+        color: var(--color-white);
+      }
+
+      .card-symbol {
+        font-size: 12px;
+        font-family: var(--font-sora-regular);
+        color: var(--color-gray-400);
+      }
+    }
+
+    .card-button {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 0.75rem;
+
+      .pump-button {
+        width: 1.6rem;
+        aspect-ratio: 1/1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+          .pump-icon {
+            stroke: var(--color-orange-300);
+          }
+        }
+
+        .pump-icon {
+          width: 1.6rem;
+          height: 1.6rem;
+          cursor: pointer;
+          stroke: var(--color-white);
+          stroke-width: 3;
+        }
+      }
+
+      .like-button {
+        width: 1.2rem;
+        aspect-ratio: 1/1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        &:hover {
+          .like-icon {
+            fill: var(--color-orange-300);
+          }
+        }
+
+        .like-icon {
+          width: 1.2rem;
+          height: 1.2rem;
+          fill: var(--color-white);
+        }
+      }
+    }
+  }
+
+  .card-data {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .card-image {
+      width: 6.6rem;
+      height: 6.6rem;
+      border-radius: 6px;
+      overflow: hidden;
+      margin-right: 1rem;
+      object-fit: contain;
+    }
+
+    .card-marketdata {
+      display: flex;
+      width: calc(100% - 6.6rem);
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 0.5rem;
+
+      .card-market-text-wrapper {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 1rem;
+
+        .card-market-text-item {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          gap: 0.5rem;
+
+          .market-text-label {
+            font-size: 10px;
+            font-family: var(--font-sora-regular);
+            color: var(--color-gray-400);
+          }
+
+          .market-text-value {
+            font-size: 12px;
+            font-family: var(--font-sora-regular);
+            color: var(--color-white);
+
+            &.positive {
+              color: var(--color-green-500);
+            }
+
+            &.negative {
+              color: var(--color-red-500);
+            }
+
+            &.zero {
+              color: var(--color-gray-200);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .card-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    .strategy-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 0.5rem;
+
+      .strategy-label {
+        font-size: 10px;
+        font-family: var(--font-sora-regular);
+        color: var(--color-gray-400);
+        text-align: left;
+      }
+    }
+  }
+}

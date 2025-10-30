@@ -1,0 +1,30 @@
+@import "@/styles/_mixin.scss";
+
+.base-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  .icon {
+    width: 3.6rem;
+    height: 3.6rem;
+  }
+}
+
+@include laptop {
+  @media (max-width: 800px) {
+    .base-logo {
+    }
+  }
+}
+
+@include tablet {
+  .base-logo {
+  }
+}
+
+@include mobile {
+  .base-logo {
+  }
+}

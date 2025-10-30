@@ -1,0 +1,22 @@
+export type GetSwapInstructionParams = {
+  chainIndex: string;
+  chainId: string;
+  amount: string;
+  fromTokenAddress: string;
+  toTokenAddress: string;
+  slippage: string;
+  autoSlippage?: boolean | undefined;
+  maxAutoSlippage?: string | undefined;
+  userWalletAddress: string;
+  swapReceiverAddress?: string | undefined;
+  feePercent?: string | undefined;
+  fromTokenReferrerWalletAddress?: string | undefined;
+  toTokenReferrerWalletAddress?: string | undefined;
+  positiveSlippagePercent?: string | undefined;
+  positiveSlippageFeeAddress?: string | undefined;
+  dexIds?: string | undefined;
+  directRoute?: boolean | undefined;
+  priceImpactProtectionPercentage?: string | undefined;
+  computeUnitPrice?: string | undefined;
+  computeUnitLimit?: string | undefined;
+};

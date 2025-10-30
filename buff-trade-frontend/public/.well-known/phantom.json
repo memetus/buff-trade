@@ -1,0 +1,15 @@
+{
+  "domain": "buff.trade",
+  "name": "Buff Trade",
+  "homepage": "https://buff.trade",
+  "icon": "https://buff.trade/favicon.ico",
+  "description": "Token creation and trading platform on Solana",
+  "splTokens": {},
+  "trustedPrograms": [
+    {
+      "address": "dbcij3LWUppWqq96dh6gJWwBifmcGfLSB5D4DuSMaqN",
+      "name": "Meteora DBC",
+      "reason": "Trusted DEX protocol for dynamic bonding curve pools"
+    }
+  ]
+}

@@ -1,0 +1,458 @@
+// ==============================
+// Typography System
+// ==============================
+
+// Font Weights
+$font-regular: 400;
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+
+// ==============================
+// Display
+// ==============================
+.display-2xl-regular {
+  font-size: 72px;
+  line-height: 90px;
+  font-weight: $font-regular;
+}
+.display-2xl-medium {
+  font-size: 72px;
+  line-height: 90px;
+  font-weight: $font-medium;
+}
+.display-2xl-semibold {
+  font-size: 72px;
+  line-height: 90px;
+  font-weight: $font-semibold;
+}
+.display-2xl-bold {
+  font-size: 72px;
+  line-height: 90px;
+  font-weight: $font-bold;
+}
+
+.display-xl-regular {
+  font-size: 60px;
+  line-height: 72px;
+  font-weight: $font-regular;
+}
+.display-xl-medium {
+  font-size: 60px;
+  line-height: 72px;
+  font-weight: $font-medium;
+}
+.display-xl-semibold {
+  font-size: 60px;
+  line-height: 72px;
+  font-weight: $font-semibold;
+}
+.display-xl-bold {
+  font-size: 60px;
+  line-height: 72px;
+  font-weight: $font-bold;
+}
+
+.display-lg-regular {
+  font-size: 48px;
+  line-height: 60px;
+  font-weight: $font-regular;
+}
+.display-lg-medium {
+  font-size: 48px;
+  line-height: 60px;
+  font-weight: $font-medium;
+}
+.display-lg-semibold {
+  font-size: 48px;
+  line-height: 60px;
+  font-weight: $font-semibold;
+}
+.display-lg-bold {
+  font-size: 48px;
+  line-height: 60px;
+  font-weight: $font-bold;
+}
+
+.display-md-regular {
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: $font-regular;
+}
+.display-md-medium {
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: $font-medium;
+}
+.display-md-semibold {
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: $font-semibold;
+}
+.display-md-bold {
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: $font-bold;
+}
+
+.display-sm-regular {
+  font-size: 30px;
+  line-height: 38px;
+  font-weight: $font-regular;
+}
+.display-sm-medium {
+  font-size: 30px;
+  line-height: 38px;
+  font-weight: $font-medium;
+}
+.display-sm-semibold {
+  font-size: 30px;
+  line-height: 38px;
+  font-weight: $font-semibold;
+}
+.display-sm-bold {
+  font-size: 30px;
+  line-height: 38px;
+  font-weight: $font-bold;
+}
+.display-sm-italic {
+  font-size: 30px;
+  line-height: 44px;
+  font-style: italic;
+  font-weight: $font-medium;
+}
+
+.display-xs-regular {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: $font-regular;
+}
+.display-xs-medium {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: $font-medium;
+}
+.display-xs-semibold {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: $font-semibold;
+}
+.display-xs-bold {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: $font-bold;
+}
+.display-xs-italic {
+  font-size: 24px;
+  line-height: 36px;
+  font-style: italic;
+  font-weight: $font-medium;
+}
+.display-xs-underline {
+  font-size: 24px;
+  line-height: 32px;
+  text-decoration: underline;
+  font-weight: $font-semibold;
+}
+
+// ==============================
+// Text
+// ==============================
+.text-xl-regular {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: $font-regular;
+}
+.text-xl-medium {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: $font-medium;
+}
+.text-xl-semibold {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: $font-semibold;
+}
+.text-xl-bold {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: $font-bold;
+}
+.text-xl-italic {
+  font-size: 20px;
+  line-height: 30px;
+  font-style: italic;
+}
+.text-xl-underline {
+  font-size: 20px;
+  line-height: 30px;
+  text-decoration: underline;
+}
+
+.text-lg-regular {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: $font-regular;
+}
+.text-lg-medium {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: $font-medium;
+}
+.text-lg-semibold {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: $font-semibold;
+}
+.text-lg-bold {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: $font-bold;
+}
+.text-lg-italic {
+  font-size: 18px;
+  line-height: 28px;
+  font-style: italic;
+}
+.text-lg-underline {
+  font-size: 18px;
+  line-height: 28px;
+  text-decoration: underline;
+}
+
+.text-md-regular {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: $font-regular;
+}
+.text-md-medium {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: $font-medium;
+}
+.text-md-semibold {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: $font-semibold;
+}
+.text-md-bold {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: $font-bold;
+}
+.text-md-italic {
+  font-size: 16px;
+  line-height: 24px;
+  font-style: italic;
+}
+.text-md-underline {
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: underline;
+}
+
+.text-sm-regular {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: $font-regular;
+}
+.text-sm-medium {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: $font-medium;
+}
+.text-sm-semibold {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: $font-semibold;
+}
+.text-sm-bold {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: $font-bold;
+}
+
+.text-xs-regular {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: $font-regular;
+}
+.text-xs-medium {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: $font-medium;
+}
+.text-xs-semibold {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: $font-semibold;
+}
+.text-xs-bold {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: $font-bold;
+}
+
+// ==============================
+// Material 3 (M3)
+// ==============================
+
+// Display
+.m3-display-large {
+  font-size: 57px;
+  line-height: 64px;
+  font-weight: $font-regular;
+}
+.m3-display-large-em {
+  font-size: 57px;
+  line-height: 64px;
+  font-weight: $font-semibold;
+}
+.m3-display-medium {
+  font-size: 45px;
+  line-height: 52px;
+  font-weight: $font-regular;
+}
+.m3-display-medium-em {
+  font-size: 45px;
+  line-height: 52px;
+  font-weight: $font-semibold;
+}
+.m3-display-small {
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: $font-regular;
+}
+.m3-display-small-em {
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: $font-semibold;
+}
+
+// Headline
+.m3-headline-large {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: $font-regular;
+}
+.m3-headline-large-em {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: $font-semibold;
+}
+.m3-headline-medium {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: $font-regular;
+}
+.m3-headline-medium-em {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: $font-semibold;
+}
+.m3-headline-small {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: $font-regular;
+}
+.m3-headline-small-em {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: $font-semibold;
+}
+
+// Title
+.m3-title-large {
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: $font-regular;
+}
+.m3-title-large-em {
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: $font-semibold;
+}
+.m3-title-medium {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: $font-regular;
+}
+.m3-title-medium-em {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: $font-semibold;
+}
+.m3-title-small {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: $font-regular;
+}
+.m3-title-small-em {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: $font-semibold;
+}
+
+// Label
+.m3-label-large {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: $font-regular;
+}
+.m3-label-large-em {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: $font-semibold;
+}
+.m3-label-medium {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: $font-regular;
+}
+.m3-label-medium-em {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: $font-semibold;
+}
+.m3-label-small {
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: $font-regular;
+}
+.m3-label-small-em {
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: $font-semibold;
+}
+
+// Body
+.m3-body-large {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: $font-regular;
+}
+.m3-body-large-em {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: $font-semibold;
+}
+.m3-body-medium {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: $font-regular;
+}
+.m3-body-medium-em {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: $font-semibold;
+}
+.m3-body-small {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: $font-regular;
+}
+.m3-body-small-em {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: $font-semibold;
+}

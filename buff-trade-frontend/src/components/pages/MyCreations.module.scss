@@ -1,0 +1,385 @@
+@import "@/styles/_mixin.scss";
+
+.my-creations {
+  background-color: #101010;
+  min-height: 100vh;
+  padding: 2rem 0;
+  font-family: "Inter-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    .title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    .header-stats {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      .rewards-info {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 8px 12px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+
+        .stat-label {
+          font-size: 0.875rem;
+          color: #757c82;
+          font-weight: 500;
+        }
+
+        .stat-value {
+          font-size: 1.125rem;
+          color: #ffffff;
+          font-weight: 600;
+          margin-right: 0.5rem;
+        }
+      }
+
+      .wallet-info {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 8px 12px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+
+        .wallet-address {
+          font-size: 0.875rem;
+          color: #757c82;
+          font-family: monospace;
+        }
+
+        .copy-btn {
+          background: none;
+          border: none;
+          cursor: pointer;
+          padding: 0.25rem;
+          border-radius: 4px;
+          transition: background-color 0.2s ease;
+
+          &:hover {
+            background: rgba(255, 255, 255, 0.1);
+          }
+
+          &.small {
+            padding: 0.125rem;
+          }
+        }
+      }
+    }
+  }
+
+  .claim-status {
+    margin-bottom: 1.5rem;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    &.success {
+      color: #55f678;
+      border-color: rgba(85, 246, 120, 0.4);
+      background: rgba(85, 246, 120, 0.08);
+    }
+
+    &.error {
+      color: #f65555;
+      border-color: rgba(246, 85, 85, 0.4);
+      background: rgba(246, 85, 85, 0.08);
+    }
+  }
+
+  .creations-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .empty-state {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    color: #757c82;
+    font-size: 1.1rem;
+  }
+
+  /* Skeleton styles for loading state */
+  .skeleton-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .skeleton-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+
+  .skeleton-rewards {
+    width: 520px;
+    max-width: 70vw;
+    height: 36px;
+  }
+
+  .skeleton-wallet {
+    width: 160px;
+    height: 36px;
+  }
+
+  .creation-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 1.5rem;
+    transition: all 0.2s ease;
+
+    &:hover {
+      border-color: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+
+      .creation-info {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .avatar {
+          width: 48px;
+          height: 48px;
+          border-radius: 12px;
+          overflow: hidden;
+          background: rgba(255, 255, 255, 0.1);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .creation-details {
+          display: flex;
+          flex-direction: column;
+          gap: 0.25rem;
+
+          .creation-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin: 0;
+          }
+
+          .creation-ticker {
+            font-size: 0.875rem;
+            color: #757c82;
+            font-weight: 500;
+            margin-left: 24px;
+          }
+        }
+      }
+
+      .claim-btn {
+        display: flex;
+        padding: 18px 24px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        border-radius: 8px;
+        background: var(--Point-Point_02, #c7430f);
+        box-shadow: 0 0 12px 0 var(--Point-Point_02, #c7430f);
+        color: #ffffff;
+        border: none;
+        font-size: 0.875rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+
+        &:hover {
+          transform: translateY(-1px);
+        }
+
+        /* Claimed/disabled state (not loading): solid dim color */
+        &:disabled:not(.loading),
+        &:not(.active) {
+          background: #2f3337;
+          box-shadow: none;
+          color: #ffffff;
+          opacity: 1;
+          cursor: not-allowed;
+        }
+
+        &.loading {
+          cursor: wait;
+          opacity: 0.85;
+        }
+      }
+    }
+
+    .data-table {
+      margin-left: 20px;
+      margin-bottom: 12px;
+
+      .table-header {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 1fr;
+        // background: #101010;
+        border-radius: 8px 8px 0 0;
+        height: 44px;
+        justify-content: center;
+        align-items: center;
+
+        span {
+          font-size: 13px;
+          color: #757c82;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+        }
+      }
+
+      .table-row {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 1fr;
+        gap: 1rem;
+        padding: 0.75rem 0;
+        align-items: center;
+
+        span {
+          font-size: 0.875rem;
+          color: #ffffff;
+          font-weight: 500;
+        }
+
+        .ticker {
+          color: #ffffff;
+        }
+
+        .contract-address {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-family: monospace;
+          font-size: 0.8rem;
+
+          .copy-btn.small {
+            background: none;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            padding: 0.125rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+              background: rgba(255, 255, 255, 0.1);
+            }
+          }
+        }
+
+        .agent-pnl {
+          .agent-pnl-value {
+            font-weight: 600;
+
+            &.positive {
+              color: #22c55e;
+            }
+
+            &.negative {
+              color: #f87171;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .my-creations {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+
+      .header-stats {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        width: 100%;
+      }
+    }
+
+    .creation-card {
+      .data-table {
+        .table-header,
+        .table-row {
+          grid-template-columns: 1fr;
+          gap: 0.5rem;
+
+          span {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+            &::before {
+              content: attr(data-label);
+              font-size: 0.75rem;
+              color: #757c82;
+              font-weight: 600;
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+    }
+  }
+}

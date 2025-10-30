@@ -1,0 +1,107 @@
+.page {
+  background: transparent;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+}
+
+// Waitlist modal styles
+.waitlist-modal {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background: rgba(0, 0, 0, 0.6) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 1rem !important;
+  z-index: 99999999999999 !important;
+  backdrop-filter: blur(8px) !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
+.waitlist-card {
+  background: #1a1a1a !important;
+  border: 2px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 16px !important;
+  padding: 2rem !important;
+  max-width: 480px !important;
+  width: 90% !important;
+  color: #e2e8f0 !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5) !important;
+  position: relative !important;
+}
+
+.waitlist-title {
+  font-weight: 800 !important;
+  color: #fff !important;
+  margin-bottom: 1rem !important;
+  font-size: 1.5rem !important;
+  text-align: center !important;
+}
+
+.waitlist-desc {
+  color: #cbd5e0 !important;
+  font-size: 1rem !important;
+  line-height: 1.6rem !important;
+  margin-bottom: 2rem !important;
+  text-align: center !important;
+}
+
+.waitlist-actions {
+  display: grid !important;
+  gap: 0.75rem !important;
+}
+
+.btn {
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #e2e8f0 !important;
+  border-radius: 12px !important;
+  padding: 0.875rem 1.25rem !important;
+  cursor: pointer !important;
+  text-align: center !important;
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease !important;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  transform: translateY(-1px) !important;
+}
+
+.btn.primary {
+  background: #4f46e5 !important;
+  border-color: #4f46e5 !important;
+  color: white !important;
+}
+
+.btn.primary:hover {
+  background: #4338ca !important;
+  border-color: #4338ca !important;
+}
+
+.btn.secondary {
+  background: rgba(79, 70, 229, 0.2) !important;
+  border-color: rgba(79, 70, 229, 0.6) !important;
+  color: #a5b4fc !important;
+}
+
+.btn.secondary:hover {
+  background: rgba(79, 70, 229, 0.3) !important;
+}
+
+.btn.ghost {
+  background: transparent !important;
+  color: #9ca3af !important;
+}
+
+.btn.ghost:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+}
